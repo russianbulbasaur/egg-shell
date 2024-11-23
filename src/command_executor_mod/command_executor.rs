@@ -4,6 +4,7 @@ use crate::command_executor_mod::exit::exit;
 use crate::command_executor_mod::echo::echo;
 use crate::command_executor_mod::type_command::type_command;
 use crate::command_executor_mod::pwd::pwd;
+use crate::command_executor_mod::cd::cd;
 pub struct CommandExecutor{
     executables:HashMap<String,String>
 }
@@ -31,6 +32,7 @@ impl CommandExecutor{
             "exit" => exit(Vec::from(&command[1..])),
             "echo" => echo(Vec::from(&command[1..])),
             "pwd" => pwd(Vec::from(&command[1..])),
+            "cd" => cd(Vec::from(&command[1..])),
             "type" => type_command(Vec::from(&command[1..]),executables),
             _ => {
                 if !executables.contains_key(command[0]) {

@@ -3,3 +3,4 @@ mod exit;
 mod echo;
 mod type_command;
 mod pwd;
+mod cd;
