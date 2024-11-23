@@ -1,3 +1,6 @@
+
+use egg_shell::egg_shell_mod::egg_shell::EggShell;
 fn main() {
-    println!("Hello, world!");
+    let egg_shell = EggShell::new_shell();
+    egg_shell.run();
 }
